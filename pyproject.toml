@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "gradient_descent_the_ultimate_optimizer"
-version = "0.1.0"
+version = "1.0"
 authors = [
   { name="Kartik Chandra" },
   { name="Audrey Xie" }
