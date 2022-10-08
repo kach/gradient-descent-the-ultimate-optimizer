@@ -25,7 +25,7 @@ We show how to *automatically* compute hypergradients with a simple and elegant 
 ...
 
 # install our package
-pip install -i https://test.pypi.org/simple/ gradient-descent-the-ultimate-optimizer
+pip install gradient-descent-the-ultimate-optimizer
 ```
 # Example
 First, build the MLP and initialize data loaders as you would normally in PyTorch.
