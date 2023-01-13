@@ -51,6 +51,14 @@ class Optimizable:
         ''' Update parameters '''
         pass
 
+    def end(self):
+        if hasattr(self, "all_params_with_gradients"):
+            for param in self.all_params_with_gradients:
+                param.grad = None
+            self.all_params_with_gradients.clear()
+        if hasattr(self, "optimizer"):
+            self.optimizer.end()
+
 class NoOpOptimizer(Optimizable):
     '''
     NoOpOptimizer sits on top of a stack, and does not affect what lies below.

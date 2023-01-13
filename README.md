@@ -96,6 +96,8 @@ for i in range(1, EPOCHS+1):
         running_loss += loss.item() * features_.size(0)
     train_loss = running_loss / len(dl_train.dataset)
     print("EPOCH: {}, TRAIN LOSS: {}".format(i, train_loss))
+# set grad to None to avoid memory leak
+mw.end()
 ```
 Note that on the first step of the train loop PyTorch will return the following warning:
 ```
